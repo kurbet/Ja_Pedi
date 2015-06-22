@@ -1,0 +1,673 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May 12 14:26:15 2015
+
+@author: andre_000
+"""
+from firebase import firebase
+
+FIREBASE_URL = "https://fiery-inferno-646.firebaseio.com/"
+
+
+fb = firebase.FirebaseApplication(FIREBASE_URL, None)
+
+# Pergunta algum valor para o usuário
+
+# Escreve dados no Firebase
+mesas = fb.get('/', "Produtos")
+
+conta = 0
+restau = str(input('Digite o nome do restaurante: '))
+mesas = {}
+num = str(input("Qual o número da mesa?"))
+mesas[num]=[]
+
+
+""""""       # PIZZARIA DO ZÉ
+
+if restau == "Pizzaria do Zé": 
+        x=str(input("Qual prato você deseja?"))
+        if x == "Pizza da Casa":
+            print('+39.90')
+            conta +=39.90
+            mesas[num].append(x)
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a2=str(input("Qual?"))
+                if a2=="Azeitonas":
+                    print('+0.99')
+                    mesas[num].append(a2)
+                    conta += 0.99
+                if a2=="Queijo extra":
+                    mesas[num].append(a2)
+                    print('+1.50')
+                    conta +=1.50
+                if a2=="Alho":
+                    mesas[num].append(a2)
+                    print('+0.99')
+                    conta += 0.99
+                if a2=="Bacon":
+                    mesas[num].append(a2)
+                    print('+1.99')
+                    conta +=1.99
+                if a2=="Massa grossa":
+                    mesas[num].append(a2)
+                    print('+0.00')
+                if a2=="Molho extra":
+                    mesas[num].append(a2)
+                    print('+1.50')
+                    conta +=1.50
+                if a2=="Tomates secos":
+                    mesas[num].append(a2)
+                    print('+1.99')
+                    conta +=1.99
+                
+        if x == "Pizza do Zé":
+            print('+45.50')
+            conta +=45.50
+            mesas[num].append(x)
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a3=str(input("Qual?"))
+                if a3=="Azeitonas":
+                    print('+0.99')
+                    conta += 0.99
+                    mesas[num].append(a3)
+                if a3=="Queijo extra":
+                    mesas[num].append(a3)
+                    print('+1.50')
+                    conta +=1.50
+                if a3=="Alho":
+                    mesas[num].append(a3)
+                    print('+0.99')
+                    conta += 0.99
+                if a3=="Bacon":
+                    mesas[num].append(a3)
+                    print('+1.99')
+                    conta +=1.99
+                if a3=="Massa grossa":
+                    mesas[num].append(a3)
+                    print('+0.00')
+                if a3=="Molho extra":
+                    mesas[num].append(a3)
+                    print('+1.50')
+                    conta +=1.50
+                if a3=="Tomates secos":
+                    mesas[num].append(a3)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "Pizza Brasileira":
+            print('+49.90')
+            conta +=49.90
+            mesas[num].append(x)
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a4=str(input("Qual?"))
+                if a4=="Azeitonas":
+                    print('+0.99')
+                    mesas[num].append(a4)
+                    conta += 0.99
+                if a4=="Queijo extra":
+                    mesas[num].append(a4)
+                    print('+1.50')
+                    conta +=1.50
+                if a4=="Alho":
+                    mesas[num].append(a4)
+                    print('+0.99')
+                    conta += 0.99
+                if a4=="Bacon":
+                    mesas[num].append(a4)
+                    print('+1.99')
+                    conta +=1.99
+                if a4=="Massa grossa":
+                    mesas[num].append(a4)
+                    print('+0.00')
+                if a4=="Molho extra":
+                    mesas[num].append(a4)
+                    print('+1.50')
+                    conta +=1.50
+                if a4=="Tomates secos":
+                    mesas[num].append(a4)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "Pizza à Moda":
+            print('+49.90')
+            conta += 49.90
+            mesas[num].append(x)
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a5=str(input("Qual?"))
+                if a5=="Azeitonas":
+                    mesas[num].append(a5)
+                    print('+0.99')
+                    conta += 0.99
+                if a5=="Queijo extra":
+                    mesas[num].append(a5)
+                    print('+1.50')
+                    conta +=1.50
+                if a5=="Alho":
+                    mesas[num].append(a5)
+                    print('+0.99')
+                    conta += 0.99
+                if a5=="Bacon":
+                    mesas[num].append(a5)
+                    print('+1.99')
+                    conta +=1.99
+                if a5=="Massa grossa":
+                    mesas[num].append(a5)
+                    print('+0.00')
+                if a5=="Molho extra":
+                    mesas[num].append(a5)
+                    print('+1.50')
+                    conta +=1.50
+                if a5=="Tomates secos":
+                    mesas[num].append(a5)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "Pizza Gourmet":
+            print('+59.90')
+            conta += 59.90
+            mesas[num].append(x)
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a6=str(input("Qual?"))
+                if a6=="Azeitonas":
+                    mesas[num].append(a6)
+                    print('+0.99')
+                    conta += 0.99
+                if a6=="Queijo extra":
+                    mesas[num].append(a6)
+                    print('+1.50')
+                    conta +=1.50
+                if a6=="Alho":
+                    mesas[num].append(a6)
+                    print('+0.99')
+                    conta += 0.99
+                if a6=="Bacon":
+                    mesas[num].append(a6)
+                    print('+1.99')
+                    conta += 1.99
+                if a6=="Massa grossa":
+                    mesas[num].append(a6)
+                    print('+0.00')
+                if a6=="Molho extra":
+                    mesas[num].append(a6)
+                    print('+1.50')
+                    conta +=1.50
+                if a6=="Tomates secos":
+                    mesas[num].append(a6)
+                    print('+1.99')
+                    conta +=1.99
+    
+        z=str(input("Você deseja alguma bebida?"))
+        if z == "Sim":
+            a1=str(input("Qual?"))
+            if a1=="Chopp":
+                mesas[num].append(a1)
+                print('+9.90')
+                conta+=9.90
+            if a1=="Cerveja":
+                mesas[num].append(a1)
+                print('+7.90')
+                conta+=7.90
+            if a1=="Coca-Cola":
+                mesas[num].append(a1)
+                print('+3.90')
+                conta+=3.90
+            if a1=="Guarana":
+                mesas[num].append(a1)
+                print('+3.90')
+                conta+=3.90
+            if a1=="Suco de Melancia":
+                mesas[num].append(a1)
+                print('+7.90')
+                conta+=7.90
+            if a1=="Suco de Limão":
+                mesas[num].append(a1)
+                print("+7.90")
+                conta+=7.90
+        print("Seu pedido foi encaminhado. Obrigado!")
+        if z =="Não":
+            print("Seu pedido foi encaminhado. Obrigado!")
+
+""""""       # BAR DA ESQUINA
+
+    
+if restau == "Bar da Esquina": 
+        x=str(input("Qual prato você deseja?"))
+        if x == "Porção de Fritas":
+            mesas[num].append(x)
+            print('+12.90')
+            conta +=12.90
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a2=str(input("Qual?"))
+                if a2=="Azeitonas":
+                    mesas[num].append("Azeitonas")
+                    print('+0.99')
+                    conta += 0.99
+                    mesas[num].append(a2)
+                if a2=="Queijos":
+                    print('+1.50')
+                    mesas[num].append(a2)
+                    conta +=1.50
+                if a2=="Alho":
+                    print('+0.99')
+                    conta += 0.99
+                    mesas[num].append(a2)
+                if a2=="Bacon":
+                    print('+1.99')
+                    mesas[num].append(a2)
+                    conta +=1.99
+                if a2=="Temperos":
+                    mesas[num].append(a2)
+                    print('+0.00')
+                if a2=="Porção Na Chapa Extra":
+                    mesas[num].append(a2)
+                    print('+5.50')
+                    conta +=5.50
+                if a2=="Tomates secos":
+                    mesas[num].append(a2)
+                    print('+1.99')
+                    conta +=1.99
+                
+        if x == "Porção de Pastéis":
+            print('+19.50')
+            conta +=19.50
+            mesas[num].append(x)
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a3=str(input("Qual?"))
+                if a3=="Azeitonas":
+                    print('+0.99')
+                    mesas[num].append(a3)
+                    conta += 0.99
+                if a3=="Queijos":
+                    mesas[num].append(a3)
+                    print('+1.50')
+                    conta +=1.50
+                if a3=="Alho":
+                    mesas[num].append(a3)
+                    print('+0.99')
+                    conta += 0.99
+                if a3=="Bacon":
+                    mesas[num].append(a3)
+                    print('+1.99')
+                    conta +=1.99
+                if a3=="Temperos":
+                    mesas[num].append(a3)
+                    print('+0.00')
+                if a3=="Porção Na Chapa Extra":
+                    print('+5.50')
+                    mesas[num].append(a3)
+                    conta +=5.50
+                if a3=="Tomates secos":
+                    mesas[num].append(a3)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "Porção de Polentas":
+            print('+21.90')
+            mesas[num].append(x)
+            conta +=21.90
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a4=str(input("Qual?"))
+                if a4=="Azeitonas":
+                    print('+0.99')
+                    mesas[num].append(a4)
+                    conta += 0.99
+                if a4=="Queijos":
+                    mesas[num].append(a4)
+                    print('+1.50')
+                    conta +=1.50
+                if a4=="Alho":
+                    mesas[num].append(a4)
+                    print('+0.99')
+                    conta += 0.99
+                if a4=="Bacon":
+                    mesas[num].append(a4)
+                    print('+1.99')
+                    conta +=1.99
+                if a4=="Temperos":
+                    mesas[num].append(a4)
+                    print('+0.00')
+                if a4=="Porção Na Chapa Extra":
+                    mesas[num].append(a4)
+                    print('+5.50')
+                    conta +=5.50
+                if a4=="Tomates secos":
+                    mesas[num].append(a4)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "Bolinho de Arroz":
+            print('+11.90')
+            mesas[num].append(x)
+            conta += 11.90
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a5=str(input("Qual?"))
+                if a5=="Azeitonas":
+                    print('+0.99')
+                    mesas[num].append(a5)
+                    conta += 0.99
+                if a5=="Queijos":
+                    mesas[num].append(a5)
+                    print('+1.50')
+                    conta +=1.50
+                if a5=="Alho":
+                    mesas[num].append(a5)
+                    print('+0.99')
+                    conta += 0.99
+                if a5=="Bacon":
+                    mesas[num].append(a5)
+                    print('+1.99')
+                    conta +=1.99
+                if a5=="Temperos":
+                    mesas[num].append(a5)
+                    print('+0.00')
+                if a5=="Porção Na Chapa Extra":
+                    mesas[num].append(a5)
+                    print('+5.50')
+                    conta +=5.50
+                if a5=="Tomates secos":
+                    mesas[num].append(a5)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "Na Chapa":
+            print('+49.90')
+            mesas[num].append(x)
+            conta += 49.90
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a6=str(input("Qual?"))
+                if a6=="Azeitonas":
+                    print('+0.99')
+                    mesas[num].append(a6)
+                    conta += 0.99
+                if a6=="Queijos":
+                    mesas[num].append(a6)
+                    print('+1.50')
+                    conta +=1.50
+                if a6=="Alho":
+                    mesas[num].append(a6)
+                    print('+0.99')
+                    conta += 0.99
+                if a6=="Bacon":
+                    mesas[num].append(a6)
+                    print('+1.99')
+                    conta += 1.99
+                if a6=="Temperos":
+                    mesas[num].append(a6)
+                    print('+0.00')
+                if a6=="Porção Na Chapa Extra":
+                    mesas[num].append(a6)
+                    print('+5.50')
+                    conta +=5.50
+                if a6=="Tomates secos":
+                    mesas[num].append(a6)
+                    print('+1.99')
+                    conta +=1.99
+    
+        z=str(input("Você deseja alguma bebida?"))
+        if z == "Sim":
+            a1=str(input("Qual?"))
+            if a1=="Chopp":
+                mesas[num].append(a1)
+                print('+9.90')
+                conta+=9.90
+            if a1=="Cerveja":
+                mesas[num].append(a1)
+                print('+7.90')
+                conta+=7.90
+            if a1=="Coca-Cola":
+                mesas[num].append(a1)
+                print('+3.90')
+                conta+=3.90
+            if a1=="Guarana":
+                mesas[num].append(a1)
+                print('+3.90')
+                conta+=3.90
+            if a1=="Suco de Melancia":
+                mesas[num].append(a1)
+                print('+7.90')
+                conta+=7.90
+            if a1=="Suco de Limão":
+                mesas[num].append(a1)
+                print("+7.90")
+                conta+=7.90
+        print("Seu pedido foi encaminhado. Obrigado!")
+        if z =="Não":
+            print("Seu pedido foi encaminhado. Obrigado!")
+
+""""""       # HAMBURGUERIA DA VILLA
+
+if restau == "Hamburgueria da Villa": 
+        x=str(input("Qual prato você deseja?"))
+        if x == "Porção de Fritas":
+            mesas[num].append(x)
+            print('+12.90')
+            conta +=12.90
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a2=str(input("Qual?"))
+                if a2=="Maionese da Casa":
+                    mesas[num].append(a2)
+                    print('+1.99')
+                    conta += 1.99
+                if a2=="Queijo extra":
+                    mesas[num].append(a2)
+                    print('+1.50')
+                    conta +=1.50
+                if a2=="Alho":
+                    mesas[num].append(a2)
+                    print('+0.99')
+                    conta += 0.99
+                if a2=="Bacon":
+                    mesas[num].append(a2)
+                    print('+1.99')
+                    conta += 1.99
+                if a2=="Temperos":
+                    mesas[num].append(a2)
+                    print('+0.00')
+                if a2=="Pão Francês":
+                    mesas[num].append(a2)
+                    print('+0.99')
+                    conta +=0.99
+                if a2=="Tomates secos":
+                    mesas[num].append(a2)
+                    print('+1.99')
+                    conta +=1.99
+                
+        if x == "X-Burguer":
+            print('+19.50')
+            conta +=19.50
+            mesas[num].append(x)
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a3=str(input("Qual?"))
+                if a3=="Maionese da Casa":
+                    mesas[num].append(a3)
+                    print('+1.99')
+                    conta += 1.99
+                if a3=="Queijo extra":
+                    mesas[num].append(a3)
+                    print('+1.50')
+                    conta +=1.50
+                if a3=="Alho":
+                    mesas[num].append(a3)
+                    print('+0.99')
+                    conta += 0.99
+                if a3=="Bacon":
+                    mesas[num].append(a3)
+                    print('+1.99')
+                    conta += 1.99
+                if a3=="Temperos":
+                    mesas[num].append(a3)
+                    print('+0.00')
+                if a3=="Pão Francês":
+                    mesas[num].append(a3)
+                    print('+0.99')
+                    conta +=0.99
+                if a3=="Tomates secos":
+                    mesas[num].append(a3)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "X-Salada":
+            print('+23.90')
+            mesas[num].append(x)
+            conta +=23.90
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a4=str(input("Qual?"))
+                if a4=="Maionese da Casa":
+                    mesas[num].append(a4)
+                    print('+1.99')
+                    conta += 1.99
+                if a4=="Queijo extra":
+                    mesas[num].append(a4)
+                    print('+1.50')
+                    conta +=1.50
+                if a4=="Alho":
+                    mesas[num].append(a4)
+                    print('+0.99')
+                    conta += 0.99
+                if a4=="Bacon":
+                    mesas[num].append(a4)
+                    print('+1.99')
+                    conta += 1.99
+                if a4=="Temperos":
+                    mesas[num].append(a4)
+                    print('+0.00')
+                if a4=="Pão Francês":
+                    mesas[num].append(a4)
+                    print('+0.99')
+                    conta +=0.99
+                if a4=="Tomates secos":
+                    mesas[num].append(a4)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "Hot-Dog":
+            print('+15.90')
+            conta += 15.90
+            mesas[num].append(x)
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a5=str(input("Qual?"))
+                if a5=="Maionese da Casa":
+                    mesas[num].append(a5)
+                    print('+1.99')
+                    conta += 1.99
+                if a5=="Queijo extra":
+                    mesas[num].append(a5)
+                    print('+1.50')
+                    conta +=1.50
+                if a5=="Alho":
+                    mesas[num].append(a5)
+                    print('+0.99')
+                    conta += 0.99
+                if a5=="Bacon":
+                    mesas[num].append(a5)
+                    print('+1.99')
+                    conta += 1.99
+                if a5=="Temperos":
+                    mesas[num].append(a5)
+                    print('+0.00')
+                if a5=="Pão Francês":
+                    mesas[num].append(a5)
+                    print('+0.99')
+                    conta +=0.99
+                if a5=="Tomates secos":
+                    mesas[num].append(a5)
+                    print('+1.99')
+                    conta +=1.99
+        
+        if x == "Da Casa":
+            print('+29.90')
+            mesas[num].append(x)
+            conta += 29.90
+            y=str(input("Deseja algum opcional?"))
+            if y=="Sim":
+                a6=str(input("Qual?"))
+                if a6=="Maionese da Casa":
+                    mesas[num].append(a6)
+                    print('+1.99')
+                    conta += 1.99
+                if a6=="Queijo extra":
+                    mesas[num].append(a6)
+                    print('+1.50')
+                    conta +=1.50
+                if a6=="Alho":
+                    mesas[num].append(a6)
+                    print('+0.99')
+                    conta += 0.99
+                if a6=="Bacon":
+                    mesas[num].append(a6)
+                    print('+1.99')
+                    conta += 1.99
+                if a6=="Temperos":
+                    mesas[num].append(a6)
+                    print('+0.00')
+                if a6=="Pão Francês":
+                    mesas[num].append(a6)
+                    print('+0.99')
+                    conta +=0.99
+                if a6=="Tomates secos":
+                    mesas[num].append(a6)
+                    print('+1.99')
+                    conta +=1.99
+    
+        z=str(input("Você deseja alguma bebida?"))
+        if z == "Sim":
+            a1=str(input("Qual?"))
+            if a1=="Chopp":
+                mesas[num].append(a1)
+                print('+9.90')
+                conta+=9.90
+            if a1=="Cerveja":
+                mesas[num].append(a1)
+                print('+7.90')
+                conta+=7.90
+            if a1=="Coca-Cola":
+                mesas[num].append(a1)
+                print('+3.90')
+                conta+=3.90
+            if a1=="Guarana":
+                mesas[num].append(a1)
+                print('+3.90')
+                conta+=3.90
+            if a1=="Suco de Melancia":
+                mesas[num].append(a1)
+                print('+7.90')
+                conta+=7.90
+            if a1=="Suco de Limão":
+                mesas[num].append(a1)
+                print("+7.90")
+                conta+=7.90
+        print("Seu pedido foi encaminhado. Obrigado!")
+        if z =="Não":
+            print("Seu pedido foi encaminhado. Obrigado!")
+            
+
+# Pergunta algum valor para o usuário
+data = mesas
+# Escreve dados no Firebase
+fb.put('/', "Produtos", data)
+
+
+
+finale= conta*1.1
+aa = str(input("Deseja pagar conta?"))
+if aa == "Sim":
+    ab = str(input("Deseja pagar com 10% de serviço?"))
+    if ab == "Sim":
+        print(finale)
+    else:
+        print(conta)
